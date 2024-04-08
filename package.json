@@ -1,0 +1,17 @@
+{
+  "name": "notes-app",
+  "private": true,
+  "workspaces":[
+    "packages/*"
+  ],
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": { 
+    "build": "npm run build --workspace=packages/app",
+    "start": "npm run start --workspace=packages/api",
+    "dev:api": "npm run build && npm run dev --workspace=api"
+  },
+  "author": "",
+  "license": "ISC"
+}
