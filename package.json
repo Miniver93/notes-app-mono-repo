@@ -1,17 +1,21 @@
 {
   "name": "notes-app",
   "private": true,
-  "workspaces":[
+  "workspaces": [
     "packages/*"
   ],
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": { 
+  "scripts": {
     "build": "npm run build --workspace=packages/app",
     "start": "npm run start --workspace=packages/api",
-    "dev:api": "npm run build && npm run dev --workspace=api"
+    "dev:api": "npm run build && npm run dev --workspace=api",
+    "lint": "eslint ./packages/api ./packages/app"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "eslint-plugin-jest": "^28.2.0"
+  }
 }

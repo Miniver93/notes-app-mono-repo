@@ -63,21 +63,21 @@ describe('Note App', function() {
 			it('note can be made important', function() {
 				//$note sería el elemento del dom li seleccionado, la nota que estoy seleccionando, esto es jquery, es una referencia del elemento del dom que he seleccionado
 				cy.get('#note_list')
-				.contains('Nota para el funcionamiento del important').then(($note) =>{
+					.contains('Nota para el funcionamiento del important').then(($note) =>{
 											
 						//Para debugar en cypress tengo que tener las herramientas de desarrollo abiertas y usar la función de cypress
 						cy.debug()
-					if($note.find('button').text().includes('Make important ⚠️')){
-						cy.contains('button', 'Make important ⚠️')
-						.click()
-						cy.contains('button', 'Make not important 🚫')
+						if($note.find('button').text().includes('Make important ⚠️')){
+							cy.contains('button', 'Make important ⚠️')
+								.click()
+							cy.contains('button', 'Make not important 🚫')
 
-					}else{
-						cy.contains('button', 'Make not important 🚫')
-						.click()
-						cy.contains('button', 'Make important ⚠️')
-					}
-				})
+						}else{
+							cy.contains('button', 'Make not important 🚫')
+								.click()
+							cy.contains('button', 'Make important ⚠️')
+						}
+					})
 
 			})
 		})

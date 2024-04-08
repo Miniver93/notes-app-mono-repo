@@ -2,7 +2,7 @@ module.exports = {
 	"env": {
 		"browser": true,
 		"es2021": true,
-		"cypress/globals": true
+		"cypress/globals": true,
 	},
 	"extends": [
 		"eslint:recommended",
@@ -30,7 +30,13 @@ module.exports = {
 		"cypress",
 		"jest"
 	],
+	"settings": {
+		"react": {
+			"version": "^18.2.0"
+		}
+	},
 	"rules": {
 		"indent": ["error", "tab"]
-	}
+	},
+	"ignorePatterns" : "dist"
 }
